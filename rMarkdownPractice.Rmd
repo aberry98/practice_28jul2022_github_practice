@@ -1,0 +1,80 @@
+---
+title: "R markdown practice"
+author: "Andrea Berry"
+date: '2022-07-28'
+output:
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown
+
+## R test
+### another test
+#### another test
+
+this is a test (no pounds)
+
+**bold**
+
+_italics_
+
+* one item 
+* item 2 
+* item 3 
+  * subitem 1 
+  * etc 
+1. number 1
+
+1. number 2
+
+1.number5
+
+There generally needs to be space between each line. Also, needs to have space after * or 1. 
+
+`code formatting`
+
+# code chunk options
+
+1. echo=FALSE
+     - means it will run but not show code
+2. eval=FALSE
+      - means show the code, but don't show the running of the code
+3. https://yihui.org/knitr/options/ has more options
+4. inline code
+
+##Inline code example below
+
+`r nrow(cars)` # r is needed; the output is 50 (becuase that's the answer to the question)
+
+Cars has `r nrow(cars)` rows.
+
+    
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+#echo=FALSE means don't show the code
+```
+
+```{r pressure2}
+plot(pressure)
+#echo=FALSE means don't show the code
+```
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
